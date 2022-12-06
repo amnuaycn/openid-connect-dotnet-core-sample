@@ -32,7 +32,7 @@ You will find the majority of the important code in [Startup.cs](Startup.cs) whi
         {
             options.ClientId = Configuration["oidc:clientid"];
             options.ClientSecret = Configuration["oidc:clientsecret"];
-            options.Authority = String.Format("https://{0}.onelogin.com/oidc", Configuration["oidc:region"]);
+            options.Authority = String.Format("https://{0}.onelogin.com/oidc/2", Configuration["oidc:subdomain"]);
 
             options.ResponseType = "code";
             options.GetClaimsFromUserInfoEndpoint = true;
